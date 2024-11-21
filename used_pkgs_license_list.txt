@@ -1,0 +1,322 @@
+absl-py: Apache 2.0
+addict: UNKNOWN
+aiodns: MIT
+aiohttp: Apache 2
+aiosignal: Apache 2.0
+altair: License information not found
+annotated-types: License information not found
+anyio: MIT
+appdirs: MIT
+apturl: UNKNOWN
+asttokens: Apache 2.0
+astunparse: BSD
+async-timeout: Apache 2
+attrs: License information not found
+audio-recorder-streamlit: License information not found
+autocomplete: MIT
+av: BSD
+backcall: UNKNOWN
+bcrypt: Apache License, Version 2.0
+beautifulsoup4: MIT License
+beniget: BSD 3-Clause
+blinker: License information not found
+bottle: MIT
+Brlapi: LGPL 2.1
+Brotli: MIT
+cachetools: MIT
+cchardet: Mozilla Public License
+certifi: MPL-2.0
+cffi: MIT
+chardet: LGPL
+charset-normalizer: MIT
+clarifai: Apache 2.0
+clarifai-grpc: Apache 2.0
+click: BSD-3-Clause
+colorama: BSD
+coloredlogs: MIT
+comm: BSD 3-Clause License
+command-not-found: UNKNOWN
+commonmark: BSD-3-Clause
+contextlib2: PSF License
+contourpy: BSD 3-Clause License
+cryptography: BSD or Apache License, Version 2.0
+cuda-python: NVIDIA Proprietary License
+cupshelpers: UNKNOWN
+cvzone: MIT
+cycler: Copyright (c) 2015, matplotlib project
+Cython: Apache-2.0
+dataclasses-json: MIT
+dbus-python: Expat (MIT/X11)
+debugpy: MIT
+decorator: new BSD License
+decord: APACHE
+defer: GNU GPL
+Deprecated: MIT
+distro: Apache License, Version 2.0
+distro-info: UNKNOWN
+duplicity: UNKNOWN
+einops: MIT
+et-xmlfile: MIT
+exceptiongroup: License information not found
+executing: MIT
+fasteners: ASL 2.0
+filelock: License information not found
+Flask: License information not found
+flatbuffers: Apache 2.0
+fonttools: MIT
+frozenlist: Apache 2
+fs: MIT
+fsspec: BSD
+ftfy: MIT
+future: MIT
+gast: BSD 3-Clause
+gdown: MIT
+gitdb: BSD License
+GitPython: BSD-3-Clause
+google-auth: Apache 2.0
+google-auth-oauthlib: Apache 2.0
+google-pasta: Apache 2.0
+googleapis-common-protos: Apache-2.0
+grad-cam: License information not found
+graphviz: MIT
+greenlet: MIT License
+grpcio: Apache License 2.0
+h11: MIT
+h5py: BSD-3-Clause
+hiddenlayer: MIT
+html5lib: MIT License
+httpcore: License information not found
+httplib2: MIT
+httpx: License information not found
+huggingface-hub: Apache
+humanfriendly: MIT
+idna: BSD-3-Clause
+imagecodecs: BSD
+imageio: BSD-2-Clause
+imgaug: MIT
+imgviz: MIT
+importlib-metadata: License information not found
+imutils: UNKNOWN
+ipykernel: BSD 3-Clause License
+ipython: BSD-3-Clause
+itsdangerous: BSD-3-Clause
+jedi: MIT
+jeepney: License information not found
+Jinja2: BSD-3-Clause
+joblib: BSD 3-Clause
+jsonschema: MIT
+jsonschema-specifications: MIT
+jupyter_client: BSD 3-Clause License
+jupyter_core: BSD 3-Clause License
+kdu-jp2: MIT
+keras: Apache 2.0
+keras-layer-normalization: MIT
+keyring: UNKNOWN
+kiwisolver: =========================
+labelme: GPLv3
+language-selector: UNKNOWN
+launchpadlib: LGPL v3
+lazr.restfulclient: LGPL v3
+lazr.uri: LGPL v3
+lazy_loader: License information not found
+libclang: Apache License 2.0
+lightning-utilities: Apache-2.0
+llama-index: MIT
+llvmlite: BSD
+lmdb: OLDAP-2.8
+lockfile: UNKNOWN
+louis: LGPLv2.1+
+lpips: UNKNOWN
+lxml: BSD
+lz4: UNKNOWN
+macaroonbakery: LGPL3
+Mako: MIT
+Markdown: Copyright 2007, 2008 The Python Markdown Project (v. 1.7 and later)
+markdown-it-py: License information not found
+MarkupSafe: BSD-3-Clause
+marshmallow: MIT
+matlabengine: LICENSE.txt, located in this repository
+matplotlib: PSF
+matplotlib-inline: BSD 3-Clause
+mdurl: License information not found
+mediapipe: Apache 2.0
+memory-profiler: BSD
+ml-dtypes: 
+mlp-mixer-pytorch: MIT
+mmaction2: Apache License 2.0
+mmcv: UNKNOWN
+mmengine: UNKNOWN
+monotonic: Apache
+more-itertools: MIT
+mpmath: BSD
+multidict: Apache 2
+mypy-extensions: MIT License
+natsort: MIT
+nest-asyncio: BSD
+netifaces: MIT License
+netron: MIT
+networkx: License information not found
+nltk: Apache License, Version 2.0
+numba: BSD
+numpy: Copyright (c) 2005-2023, NumPy Developers.
+oauthlib: BSD
+olefile: BSD
+onnxruntime: MIT License
+onx: GPL-3.0-or-later
+openai: License information not found
+openai-clip: License information not found
+opencv-contrib-python: Apache 2.0
+opencv-python: Apache 2.0
+openpyxl: MIT
+opt-einsum: MIT
+packaging: License information not found
+pandas: BSD-3-Clause
+paramiko: LGPL
+parso: MIT
+pexpect: ISC license
+pickleshare: MIT
+pillow: HPND
+platformdirs: License information not found
+ply: BSD
+progressbar33: LICENSE.txt
+prompt-toolkit: License information not found
+protobuf: BSD-3-Clause
+psutil: BSD-3-Clause
+ptyprocess: License information not found
+pure-eval: MIT
+py-cpuinfo: MIT
+pyarrow: Apache License, Version 2.0
+pyasn1: BSD-2-Clause
+pyasn1-modules: BSD
+pycairo: LGPL-2.1-only OR MPL-1.1
+pycares: MIT
+pycparser: BSD
+pycups: GPLv2+
+pydantic: MIT
+pydantic_core: MIT
+pydeck: Apache License 2.0
+pydub: MIT
+pyenchant: LGPL
+pyfiglet: MIT
+pygame: LGPL
+Pygments: BSD-2-Clause
+PyGObject: GNU LGPL
+pyiqa: UNKNOWN
+PyJWT: MIT
+pymacaroons: MIT
+PyNaCl: Apache License 2.0
+PyOpenGL: BSD
+pyparsing: License information not found
+pypdf: License information not found
+PyQt5: GPL v3
+PyQt5-sip: SIP
+pyRFC3339: MIT
+PySocks: BSD
+python-apt: GNU GPL
+python-dateutil: Dual License
+python-debian: GPL-2+
+python-dotenv: BSD-3-Clause
+python-rapidjson: MIT License
+pythran: BSD 3-Clause
+pytorch-lightning: Apache-2.0
+pytorch-msssim: License information not found
+pytorch-triton: License information not found
+pyttsx3: UNKNOWN
+pytz: MIT
+PyWavelets: MIT
+pyxdg: UNKNOWN
+PyYAML: MIT
+pyzmq: LGPL+BSD
+QtPy: MIT
+referencing: MIT
+regex: Apache Software License
+reportlab: BSD license (see license.txt for details), Copyright (c) 2000-2018, ReportLab Inc.
+requests: Apache 2.0
+requests-oauthlib: ISC
+rich: MIT
+rpds-py: MIT
+rsa: Apache-2.0
+safetensors: Apache License 2.0
+schema: MIT
+scikit-image: Files: *
+scikit-learn: new BSD
+scipy: Copyright (c) 2001-2002 Enthought, Inc. 2003-2023, SciPy Developers.
+screen-resolution-extra: gpl
+seaborn: License information not found
+SecretStorage: BSD 3-Clause License
+shapely: BSD 3-Clause
+single-source: MIT
+six: MIT
+sklearn: UNKNOWN
+smmap: BSD
+sniffio: MIT OR Apache-2.0
+sounddevice: MIT
+soupsieve: MIT License
+SQLAlchemy: MIT
+ssh-import-id: GPLv3
+SSIM-PIL: MIT License
+stack-data: MIT
+streamlit: Apache License 2.0
+sympy: BSD
+systemd-python: LGPLv2+
+tb-nightly: Apache 2.0
+tenacity: Apache 2.0
+tensorboard: Apache 2.0
+tensorboard-data-server: Apache 2.0
+tensorboardX: MIT license
+tensorflow: Apache 2.0
+tensorflow-estimator: Apache 2.0
+tensorflow-io-gcs-filesystem: License information not found
+termcolor: MIT
+textual: MIT
+thop: MIT
+threadpoolctl: BSD-3-Clause
+tifffile: BSD
+tiktoken: MIT License
+timm: License information not found
+tk: Apache 2.0 Licence
+tokenizers: License information not found
+toml: MIT
+tomli: License information not found
+toolz: BSD
+torch: BSD-3
+torch-cka: UNKNOWN
+torchaudio: License information not found
+torchmetrics: Apache-2.0
+torchsummary: UNKNOWN
+torchview: MIT
+torchvision: BSD
+torchviz: BSD
+tornado: Apache-2.0
+tqdm: MPL-2.0 AND MIT
+traitlets: # Licensing terms
+transformers: Apache 2.0 License
+tritonclient: BSD
+ttach: MIT
+typing-inspect: MIT
+typing_extensions: License information not found
+tzlocal: MIT
+ubuntu-advantage-tools: GPLv3
+ubuntu-drivers-common: gpl
+ufoLib2: Apache 2.0
+ufw: GPL-3
+ultralytics: AGPL-3.0
+unattended-upgrades: UNKNOWN
+unicodedata2: Apache License 2.0
+urllib3: MIT
+usb-creator: UNKNOWN
+validators: MIT
+vision-transformer-pytorch: Apache
+wadllib: LGPL v3
+watchdog: Apache License 2.0
+wcwidth: MIT
+webcolors: BSD-3-Clause
+webencodings: BSD
+Werkzeug: License information not found
+wrapt: BSD
+xdg: License information not found
+xkit: GPL v2 or later
+xlrd: BSD
+yapf: Apache License, Version 2.0
+yarl: Apache-2.0
+zipp: UNKNOWN
