@@ -1044,3 +1044,131 @@ class CVIQD(Dataset):
             return self.all_patches[index], self.all_image_patches[index], self.label[index]
         else:
             return self.distorted_patches[index], self.image_patches[index], self.scores[index]
+
+class IQA_ODI_Dataset(Dataset):
+    def __init__(self, id_path = "/home/ishita-wicon/Documents/QA/iqa-odi/Imp_ID.txt", dmos_path = "/home/ishita-wicon/Documents/QA/iqa-odi/Imp_DMOS.txt", img_dir = "/home/ishita-wicon/Documents/QA/iqa-odi/all_ref_test_img/", train = False):
+
+        self.train = train
+        self.img_dir = img_dir
+
+        self.reference_images, self.distorted_images, self.scores = self.load_triplet_data(self.img_dir, dmos_path, id_path)
+
+        self.distorted_patches = []
+        self.image_patches = []
+
+        self.all_patches = ()
+        self.all_image_patches = ()
+   
+        self.label = []
+
+        dist_model = UNet_Light().to(device)
+        dist_model.load_state_dict(torch.load("best_unet_light_32_patch_distortion_pristine_all.pth"))
+
+
+        c = list(zip(self.reference_images, self.distorted_images, self.scores))
+
+        random.shuffle(c)
+
+        self.reference_images, self.distorted_images, self.scores = zip(*c)
+
+        trainindex = indices[:int(0.8 * len(indices))]
+        testindex = indices[int((1 - 0.2) * len(indices)):]
+        train_index, test_index = [], []
+
+        for i in range(len(indices)):
+            if(i in trainindex):
+                train_index.append(i)
+            elif(i in testindex):
+                test_index.append(i)
+
+        if self.train:
+            self.curr_indices = train_index
+        else:
+            self.curr_indices = test_index
+
+        for ind in range(len(self.curr_indices)):
+
+            distorted_image = cv2.imread(self.distorted_images[ind], cv2.IMREAD_GRAYSCALE)
+            distorted_image = cv2.resize(distorted_image, (256, 256))
+            patch_size=32
+            stride=32
+            patches = ()
+            patches_images = ()
+            w, h = distorted_image.shape[1], distorted_image.shape[0]
+            for i in range(0, h-patch_size+1, stride):
+                for j in range(0, w-patch_size+1, stride):
+                    patch = distorted_image[i:i+patch_size, j:j+patch_size]
+                    patch = Image.fromarray(patch)
+                    patch = to_tensor(patch)
+                    patch = patch.unsqueeze(0)
+                    patch = patch.to(device)
+                    patches_images = patches_images + (patch, )
+                    self.all_image_patches = self.all_image_patches + (patch, )
+                    distortion_patch = dist_model(patch).detach().cpu()
+                    patches = patches + (distortion_patch[0],)
+                    self.all_patches = self.all_patches + (distortion_patch[0],)
+                    self.label.append(self.scores[ind])
+            self.distorted_patches.append(patches)
+            self.image_patches.append(patches_images)
+
+        
+
+    def load_triplet_data(self, img_dir, dmos_path, id_path):
+        id_list = []
+
+        with open(id_path, 'r') as file:
+            for line in file:
+                id_list.append(line)
+
+        indices_con = []
+
+        for i in range(len(id_list)):
+            item = id_list[i]
+
+            if "_ERP_" not in item and "_cpp_" not in item and "_cmp_" not in item and "_isp_" not in item and "_ohp_" not in item:
+                indices_con.append(i)
+            elif "_cpp_" not in item and "_cmp_" not in item:
+                indices_con.append(i)
+
+        dmos_list = []
+
+        with open(dmos_path, 'r') as file:
+            for line in file:
+                dmos_list.append(line)
+
+        final_dmos = []
+        final_ref = []
+        final_dist = []
+
+        for i in indices_con:
+            x = id_list[i]
+            x = x[:x.find("\n")]
+            
+            spl = x.split("_")
+            tp = spl[2]
+            num = spl[3]
+            refn = img_dir+tp+"_"+num+".jpg"
+            distn = img_dir+x+".jpg"
+
+            final_ref.append(refn)
+            final_dist.append(distn)
+
+            x = dmos_list[i]
+            x = x[:x.find("\n")]
+            x = float(x)
+            final_dmos.append(x)
+        
+        return final_ref, final_dist, final_dmos
+
+    def __len__(self):
+        if self.train:
+            return len(self.all_patches)
+        else:
+            return len(self.distorted_patches)
+
+    def __getitem__(self, index):
+
+        if self.train:
+            return self.all_patches[index], self.all_image_patches[index], self.label[index]
+        else:
+            return self.distorted_patches[index], self.image_patches[index], self.scores[index]
