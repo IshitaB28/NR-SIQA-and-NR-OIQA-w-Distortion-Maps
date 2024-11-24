@@ -120,7 +120,7 @@ class QNet_CNN(nn.Module): #Proposed QNet_CNN
         return num_features
     
 
-class QNet_Mixer(nn.Module): # Proposed QNet_Mixer model
+class QNet_Mixer(nn.Module):
     def __init__(self, image_size = (32, 32), channels = 1, patch_size = 8, dim = 128, depth = 8, num_classes = 1):
         super(QNet_Mixer, self).__init__()
         self.d_mixer_model = MLPMixer(
@@ -172,7 +172,7 @@ class QNet_Mixer(nn.Module): # Proposed QNet_Mixer model
     
 
 
-class QNet_CNNWOD(nn.Module): #Proposed QNet_CNN
+class QNet_CNNWOD(nn.Module):
     def __init__(self):
         super(QNet_CNNWOD, self).__init__()
         
