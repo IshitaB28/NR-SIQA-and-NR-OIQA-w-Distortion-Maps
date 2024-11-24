@@ -22,15 +22,15 @@ P.S.: the 'mos.csv' files used for WIVC I and WIVC II datasets are created from 
 
 6. "stereo_models.py": contains all the models that can be used for the quality assessment of stereoscopic images. In our study, they can be used for LIVE I, LIVE II, WIVC I, WIVC II, IRCCyn, and LIVE3DVR (stereoscopic omnidirectional) datasets.
 
-7. "omni2d_models.py": contains all the models that can be used for the quality assessment of 2D images or 2D omnidirectional images. In our study, they can be used for CVIQ dataset.
+7. "omni2d_models.py": contains all the models that can be used for the quality assessment of 2D images or 2D omnidirectional images. In our study, they can be used for CVIQ and IQA-ODI datasets.
 
 8. "train_stereo_qa_models.py": used to train the models from "stereo_models.py" on stereoscopic image quality assessment databases.
 
-9. "test_stereo_qa_models.py": tests the models from "stereo_models.py" on stereoscopic image quality assessment databases. This scipt can also be used for cross dataset results.
+9. "test_stereo_qa_models.py": tests the models from "stereo_models.py" on stereoscopic image quality assessment databases. This script can also be used for cross dataset results on SIQA datasets.
 
 10. "train_omni2d_qa_models.py": used to train the models from "omni2d_models.py" on omnidirectional image quality assessment databases.
 
-11. "test_omni2d_qa_models.py": tests the models from "omni2d_models.py" on omnidirectional image quality assessment databases.
+11. "test_omni2d_qa_models.py": tests the models from "omni2d_models.py" on omnidirectional image quality assessment databases. This script can also be used for cross dataset results on OIQA datasets.
 
 The "patch_size" parameters in the scripts can be varied to obtain the results of the impact of patch size on the QNet. The alternate in configurations for the model are mentioned in comments for patch size 16, 32, 64, and 128
 
