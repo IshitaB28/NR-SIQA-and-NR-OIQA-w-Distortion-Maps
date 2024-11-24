@@ -47,6 +47,9 @@ num_epochs = 2
 indices = list(range(0, 544)) #cviqd
 train_dataset = CVIQD(indices, score_path="path-to-CVIQ.mat", img_dir="path-to-cviq-images", train=True)
 
+# indices = list(range(0, 720)) #iqaoid
+# train_dataset = IQA_ODI_Dataset(train=True)
+
 print("Dataset loaded for training: ", len(train_dataset))
 
 num_folds = 5
