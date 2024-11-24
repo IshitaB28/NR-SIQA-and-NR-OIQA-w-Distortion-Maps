@@ -32,6 +32,9 @@ def log_reg(x, a, b, c, d, e):
 indices = list(range(0, 544)) #cviqd
 test_dataset = CVIQD(indices, score_path="path-to-CVIQ.mat", img_dir="path-to-CVIQ-images", train=False)
 
+# indices = list(range(0, 720)) #iqaoid
+# test_dataset = IQA_ODI_Dataset(id_path = "path-to-Imp_ID.txt", dmos_path = "path-to-Imp_DMOS.txt", img_dir = "path-to-all_ref_test_img", train=False)
+
 
 print("Dataset loaded for testing: ", len(test_dataset))
 
