@@ -46,7 +46,9 @@ quality_model = QNet_CNN().to(device)
 # quality_model = QNet_CNNWOD().to(device)
 # quality_model = QNet_MixerWOD().to(device)
 
-quality_model.load_state_dict(torch.load("best-model-save.pth"))
+quality_model.load_state_dict(torch.load("best-model-save.pth")) # replace path with the best model trained on other datasets except the test_dataset
+                                                                 # for cross dataset experiments
+
 
 target_scores = []
 output_scores = []
