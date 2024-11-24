@@ -48,7 +48,7 @@ indices = list(range(0, 544)) #cviqd
 train_dataset = CVIQD(indices, score_path="path-to-CVIQ.mat", img_dir="path-to-cviq-images", train=True)
 
 # indices = list(range(0, 720)) #iqaoid
-# train_dataset = IQA_ODI_Dataset(train=True)
+# train_dataset = IQA_ODI_Dataset(id_path = "path-to-Imp_ID.txt", dmos_path = "path-to-Imp_DMOS.txt", img_dir = "path-to-all_ref_test_img", train=True)
 
 print("Dataset loaded for training: ", len(train_dataset))
 
